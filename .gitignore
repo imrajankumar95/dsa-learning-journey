@@ -1,0 +1,15 @@
+# Compiled
+*.exe
+*.out
+*.o
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notes (kept local)
+*.pdf
