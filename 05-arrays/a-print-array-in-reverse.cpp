@@ -4,7 +4,10 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Read array, print elements from last index to first.
+// Statement: Given an array of N integers (1<=N<=1e5, -1e9<=Ai<=1e9),
+//            print its elements in reverse order.
+//
+// Approach: Read array, print elements from last index to first.
 
 #include <iostream>
 using namespace std;

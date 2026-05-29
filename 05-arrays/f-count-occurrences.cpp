@@ -4,7 +4,9 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Count how many times X appears. Linear scan, increment a counter on match.
+// Statement: Given an array and an integer X, find how many times X appears.
+//
+// Approach: Linear scan, increment a counter on each match.
 
 #include <iostream>
 using namespace std;

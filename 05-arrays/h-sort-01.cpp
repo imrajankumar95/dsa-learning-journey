@@ -4,8 +4,11 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Array holds only 0s and 1s. Count each, then print c0 zeros followed by c1 ones.
-// Counting approach avoids a comparison sort.
+// Statement: Array of size N contains only 0s and 1s. Print it sorted ascending.
+//            Multiple test cases (t up to 1e2).
+//
+// Approach: Count 0s and 1s, then print c0 zeros followed by c1 ones.
+//           Counting avoids an O(n log n) comparison sort.
 
 #include <iostream>
 using namespace std;

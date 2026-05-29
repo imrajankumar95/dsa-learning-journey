@@ -4,7 +4,10 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Track max value + 1-based position. Strict > keeps the FIRST occurrence on ties.
+// Statement: Find the maximum element in the array and its 1-based position.
+//            If the max appears multiple times, print the first occurrence.
+//
+// Approach: Track max value + position. Strict > keeps the FIRST occurrence on ties.
 // Note: variable named `min` but holds the max — kept as submitted (logic is correct).
 
 #include <iostream>

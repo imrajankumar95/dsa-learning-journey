@@ -4,7 +4,9 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Print array in reverse order by iterating from last index to first.
+// Statement: Reverse the array (in-place) and print it.
+//
+// Approach: Print array in reverse order by iterating from last index to first.
 
 #include <iostream>
 using namespace std;

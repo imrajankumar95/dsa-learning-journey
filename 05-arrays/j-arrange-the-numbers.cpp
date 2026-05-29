@@ -4,8 +4,11 @@
 // Difficulty: Easy-Medium
 // Time: O(n)  Space: O(n)
 //
-// Build array of 1..n: odd numbers fill from the left (i++), even from the right (j--).
-// Two-pointer fill — odds go front in increasing order, evens go back in decreasing order.
+// Statement: Given n, build an array of 1..n where odds appear in increasing order
+//            from the left and evens in decreasing order from the right.
+//            e.g. n=5 -> 1 3 5 4 2
+//
+// Approach: Two-pointer fill — odds go front (i++), evens go back (j--).
 
 #include <iostream>
 using namespace std;

@@ -4,7 +4,10 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Track min value + 1-based position. Strict < keeps the FIRST (smallest) position on ties.
+// Statement: Find the minimum element in the array and its 1-based position.
+//            If the min appears multiple times, print the smallest position.
+//
+// Approach: Track min value + position. Strict < keeps the FIRST (smallest) position on ties.
 
 #include <iostream>
 using namespace std;

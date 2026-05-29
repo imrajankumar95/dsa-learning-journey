@@ -4,7 +4,9 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Linear scan for target X. break early once found.
+// Statement: Given an array and a value X, print "YES" if X is present, else "NO".
+//
+// Approach: Linear scan for target X. break early once found.
 
 #include <iostream>
 using namespace std;
