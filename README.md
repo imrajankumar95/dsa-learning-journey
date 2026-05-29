@@ -10,24 +10,23 @@ Structured problem-solving practice in C++, organized by topic and pattern. Each
 
 ## Topics
 
-| # | Topic | Problems | Status |
-|---|-------|----------|--------|
-| 01 | [C++ Basics](01-cpp-basics/) | — | ✅ Covered |
-| 02 | [Loops](02-loops/) | — | ✅ Covered |
-| 03 | [Patterns](03-patterns/) | — | ✅ Covered |
-| 04 | [Functions](04-functions/) | — | ✅ Covered |
-| 05 | [Arrays](05-arrays/) | — | ✅ Covered |
-| 06 | [2D Arrays](06-2d-arrays/) | — | ✅ Covered |
-| 07 | [Strings](07-strings/) | — | ✅ Covered |
-| 08 | [Sorting](08-sorting/) | — | ✅ Covered |
-| 09 | [Sets & Maps](09-sets-and-maps/) | — | ✅ Covered |
-| 10 | [Two Pointers](10-two-pointers/) | — | 🔄 Practicing |
-| 11 | [Sliding Window](11-sliding-window/) | — | 🔄 Practicing |
-| 12 | [Binary Search](12-binary-search/) | — | ✅ Cleared |
-| 13 | [Bit Manipulation](13-bit-manipulation/) | 5 | ✅ Active |
-| 14 | [Recursion](14-recursion/) | 9 | ✅ Active |
+| # | Topic | Solved | Status |
+|---|-------|--------|--------|
+| 01 | [Arrays](05-arrays/) | 17 | ✅ Covered |
+| 02 | [2D Arrays](06-2d-arrays/) | 10 | ✅ Covered |
+| 03 | [Strings](07-strings/) | 14 | ✅ Covered |
+| 04 | [Sorting & Searching](08-sorting/) | 14 | ✅ Covered |
+| 05 | [Prefix Sums](prefix-sums/) | 13 | ✅ Covered |
+| 06 | [Sets & Maps](09-sets-and-maps/) | 13 | ✅ Covered |
+| 07 | [Sliding Window & Two Pointers](11-sliding-window/) | 10 | ✅ Covered |
+| 08 | [Binary Search](12-binary-search/) | 7 | ✅ Covered |
+| 09 | [Number Theory](number-theory/) | — | ✅ Covered |
+| 10 | [Bit Manipulation](13-bit-manipulation/) | 8 | ✅ Covered |
+| 11 | [Recursion](14-recursion/) | 14 | ✅ Covered |
+| 12 | [Backtracking](backtracking/) | 12 | ✅ Covered |
+| 13 | [Contests](contests/) | 35 | ✅ 5 contests |
 
-> Problem count updates as solutions are added. Topics 01–09 covered in class — solutions being migrated.
+> **243 problems solved** in the 100xSchool Bootcamp Codeforces group. Core DSA solutions migrated here (C++ basics, loops, and pattern printing excluded — foundational, not algorithmic).
 
 ---
 
@@ -60,8 +59,8 @@ Step-by-step solution logic.
 
 ## Progress
 
-- **200+ problems** solved across Codeforces group contests and practice
-- Topics actively practicing: Sliding Window, Two Pointers, Recursion, Bit Manipulation
+- **243 problems solved** across Codeforces group contests and practice (82% bootcamp completion)
+- Strongest topics: Recursion, Backtracking, Sliding Window, Sets & Maps
 - Weekly: 5–10 new problems during active study, 2/week maintenance
 
 ---
