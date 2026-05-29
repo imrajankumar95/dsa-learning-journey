@@ -4,8 +4,13 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Determine whether the array is sorted in ascending order.
-//            Print YES if Ai <= Ai+1 for all i, else NO.
+// Statement:
+//   Given an array of N integers, determine whether it is sorted ascending
+//   (Ai <= Ai+1 for all 1<=i<N). Print YES or NO (any letter case accepted).
+//   Input:  Line 1 = N. Line 2 = N integers Ai.
+//   Output: "YES" if sorted ascending, else "NO".
+//   Example: Input  -> 5 / 1 2 3 4 5   Output -> YES
+//            Input  -> 4 / 5 3 4 1     Output -> NO
 //
 // Approach: Array sorted ascending if a[i] >= a[i-1] for all i. break on first violation.
 

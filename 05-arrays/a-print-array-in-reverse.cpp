@@ -4,8 +4,12 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Given an array of N integers (1<=N<=1e5, -1e9<=Ai<=1e9),
-//            print its elements in reverse order.
+// Statement:
+//   You are given an array of integers. Print the elements in reverse order.
+//   Input:  Line 1 = N (1<=N<=1e5). Line 2 = N integers Ai (-1e9<=Ai<=1e9).
+//   Output: The elements in reverse order.
+//   Example: Input  -> 5 / 1 2 3 4 5
+//            Output -> 5 4 3 2 1
 //
 // Approach: Read array, print elements from last index to first.
 

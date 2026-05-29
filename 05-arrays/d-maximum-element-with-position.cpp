@@ -4,8 +4,13 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Find the maximum element in the array and its 1-based position.
-//            If the max appears multiple times, print the first occurrence.
+// Statement:
+//   Given an array of integers, find the maximum element and its position.
+//   If multiple maximum elements exist, print the position of the first occurrence.
+//   Input:  Line 1 = N (1<=N<=1e5). Line 2 = N integers Ai (-1e9<=Ai<=1e9).
+//   Output: Two integers — the maximum element and its 1-based position.
+//   Example: Input  -> 5 / 1 2 4 3 1
+//            Output -> 4 3
 //
 // Approach: Track max value + position. Strict > keeps the FIRST occurrence on ties.
 // Note: variable named `min` but holds the max — kept as submitted (logic is correct).

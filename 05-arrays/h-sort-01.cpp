@@ -4,8 +4,13 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Array of size N contains only 0s and 1s. Print it sorted ascending.
-//            Multiple test cases (t up to 1e2).
+// Statement:
+//   Given an integer array of size N containing only 0s and 1s, print the
+//   sorted array. Multiple test cases.
+//   Input:  t (1<=t<=1e2). For each: N (0<=N<=1e5) then N integers (0 or 1).
+//   Output: The expected sorted array for each test case.
+//   Example: Input  -> 1 / 7 / 0 1 1 0 1 0 1
+//            Output -> 0 0 0 1 1 1 1
 //
 // Approach: Count 0s and 1s, then print c0 zeros followed by c1 ones.
 //           Counting avoids an O(n log n) comparison sort.

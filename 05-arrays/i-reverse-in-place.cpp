@@ -4,7 +4,12 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Reverse the array (in-place) and print it.
+// Statement:
+//   You are given an array of integers. Reverse it (in-place) and print it.
+//   Input:  Line 1 = N (1<=N<=1e5). Line 2 = N integers Ai (-1e9<=Ai<=1e9).
+//   Output: The array after reversing.
+//   Example: Input  -> 5 / 1 3 7 9 10
+//            Output -> 10 9 7 3 1
 //
 // Approach: Print array in reverse order by iterating from last index to first.
 

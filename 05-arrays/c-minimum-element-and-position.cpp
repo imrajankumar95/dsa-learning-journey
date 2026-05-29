@@ -4,8 +4,13 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Find the minimum element in the array and its 1-based position.
-//            If the min appears multiple times, print the smallest position.
+// Statement:
+//   Find the minimum element in the array and its position. If multiple positions
+//   contain the minimum value, print the smallest position.
+//   Input:  Line 1 = N (1<=N<=1e5). Line 2 = N integers Ai (-1e9<=Ai<=1e9).
+//   Output: Two integers — the minimum value and its 1-based position.
+//   Example: Input  -> 6 / 7 3 4 5 3 10
+//            Output -> 3 2
 //
 // Approach: Track min value + position. Strict < keeps the FIRST (smallest) position on ties.
 

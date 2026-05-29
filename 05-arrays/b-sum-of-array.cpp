@@ -4,8 +4,12 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Given an array of N integers (1<=N<=1e5, -1e9<=Ai<=1e9),
-//            print the sum of all elements.
+// Statement:
+//   You are given an array of integers. Find the sum of all elements.
+//   Input:  Line 1 = N (1<=N<=1e5). Line 2 = N integers Ai (-1e9<=Ai<=1e9).
+//   Output: A single integer — the sum of the array elements.
+//   Example: Input  -> 5 / 1 2 3 4 5
+//            Output -> 15
 //
 // Approach: Accumulate sum. Use long long — sum can exceed int range
 //           (n up to 1e5, |Ai| up to 1e9 => up to 1e14).

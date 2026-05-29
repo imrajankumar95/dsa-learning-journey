@@ -4,7 +4,12 @@
 // Difficulty: Easy
 // Time: O(n)  Space: O(n)
 //
-// Statement: Given an array and an integer X, find how many times X appears.
+// Statement:
+//   Given an array of integers and an integer X, find how many times X appears.
+//   Input:  Line 1 = N and X (1<=N<=1e5, -1e9<=X<=1e9). Line 2 = N integers Ai.
+//   Output: A single integer — the number of times X appears.
+//   Example: Input  -> 6 3 / 1 5 2 3 7 3
+//            Output -> 2
 //
 // Approach: Linear scan, increment a counter on each match.
 
