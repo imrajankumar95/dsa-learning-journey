@@ -1,0 +1,663 @@
+K. Swap Alternate
+time limit per test1 second
+memory limit per test256 megabytes
+You are given an array A
+ of size n
+. Your task is to swap every pair of alternate elements in the array.
+
+Input
+The first line contains a single integer t
+ (1≤t≤100
+) — the number of test cases.
+
+Each test case consists of two lines:
+
+The first line contains an integer n
+ (0≤n≤105
+) — the size of the array.
+The second line contains n
+ integers a1,a2,…,an
+ (1≤ai≤109
+).
+It is guaranteed that the sum of n
+ over all test cases does not exceed 105
+.
+
+Output
+For each test case, print the modified array after performing all swaps.
+
+Examples
+Input
+1
+6
+9 3 6 12 4 32
+OutputCopy
+3 9 12 6 32 4
+Input
+2
+9
+9 3 6 12 4 32 5 11 19
+4
+1 2 3 4
+Output
+3 9 12 6 32 4 11 5 19
+2 1 4 3
+
+My Solution
+
+#include <iostream>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    
+    int a[n];
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    
+    for (int i = 1; i < n; i += 2)
+    {
+        swap(a[i], a[i - 1]);
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    
+    int t;
+    cin >> t;
+    
+    for(int i = 1; i <= t; i++)
+    {
+        solve();
+    }
+}
+
+
+L. Missing Number
+time limit per test1 second
+memory limit per test256 megabytes
+You are given an integer array of size n
+, where n=2m+1
+.
+
+In this array, exactly m
+ numbers appear twice, and exactly one number appears only once. Your task is to find and return that unique number.
+
+Input
+The first line contains an integer t
+ (1≤t≤100
+) — the number of test cases.
+
+Each test case consists of two lines:
+
+The first line contains a single integer n
+ (1≤n≤1000
+, n
+ is always odd).
+The second line contains n
+ integers a1,a2,…,an
+ (1≤ai≤106
+) — the elements of the array.
+It is guaranteed that in each test case there is exactly one element that appears once, and all others appear exactly twice.
+
+Output
+For each test case, print a single integer, the unique element.
+
+Examples
+Input
+1
+7
+2 3 1 6 3 6 2
+Output
+1
+Input
+2
+5
+2 4 7 2 7
+9
+1 3 1 3 6 6 7 10 7
+Output
+4
+10
+
+
+My Solution
+
+#include <iostream>
+using namespace std;
+ 
+void solve()
+{
+    int n;
+    cin >> n;
+    
+    int a[n];
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    
+    int missNum;
+    for (int i = 0; i < n; i ++)
+    {
+        missNum = a[i];
+        int count = 0;
+        
+        for(int j = 0; j < n; j++)
+        {
+            if(a[j] == missNum)
+            {
+                count++;
+            }
+        }
+        
+        if(count == 1)
+        {
+            missNum = a[i];
+            break;
+        }
+        
+    }
+    cout << missNum << endl;
+}
+ 
+int main() {
+    
+    int t;
+    cin >> t;
+    
+    for(int i = 1; i <= t; i++)
+    {
+        solve();
+    }
+}
+
+
+M. Find Duplicate Number
+time limit per test1 second
+memory limit per test256 megabytes
+You have been given an integer array of size N
+ which contains numbers from 0
+ to (N−2)
+. Each number is present at least once. Among these, there is a single integer value that is present twice.
+
+You need to find the duplicate number present in the array.
+
+Input
+The first line contains a single integer t
+ (1≤t≤100)
+ — the number of test cases.
+
+The first line of each test case contains an integer N
+ (0≤N≤1000)
+. The second line contains N
+ integers representing the array/list.
+
+Output
+For each test case, print the duplicate number in the array.
+
+Examples
+Input
+1
+9
+0 7 2 5 4 7 1 3 6
+Output
+7
+Input
+2
+5
+0 2 1 3 1
+7
+0 3 1 5 4 3 2
+OutputCopy
+1
+3
+
+My Solution (M)
+
+#include <iostream>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    
+    int a[n];
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    
+    int dup;
+    for (int i = 0; i < n; i ++)
+    {
+        dup = a[i];
+        int count = 0;
+        
+        for(int j = 0; j < n; j++)
+        {
+            if(a[j] == dup)
+            {
+                count++;
+            }
+        }
+        if(count == 2)
+        {
+            dup = a[i];
+            break;
+        }
+    }
+    cout << dup << endl;
+}
+
+int main() {
+    
+    int t;
+    cin >> t;
+    
+    for(int i = 1; i <= t; i++)
+    {
+        solve();
+    }
+}
+
+
+N. Intersection of Arrays
+time limit per test1 second
+memory limit per test256 megabytes
+You have been given two integer arrays of size N
+ and M
+, respectively. You need to print their intersection.
+
+Input
+The first line contains an integer t
+ (1≤t≤100)
+ — the number of test cases.
+
+For each test case: The first line contains an integer N
+ (0≤N≤1000)
+, the size of the first array. The second line contains N
+ integers. The third line contains an integer M
+ (0≤M≤1000)
+, the size of second array. The fourth line contains M
+ integers.
+
+Output
+For each test case, print the intersection in one line. Elements must follow the order they appear in the first array.
+
+Examples
+Input
+2
+6
+2 6 8 5 4 3
+4
+2 3 4 7
+2
+10 10
+1
+10
+Output
+2 4 3
+10
+Input
+1
+4
+2 6 1 2
+5
+1 2 3 4 2
+Output
+2 1 2
+
+My Solution (N)
+#include <iostream>
+using namespace std;
+
+void solved()
+{
+    int n;
+    cin >> n;
+    
+    int arr1[n];
+    for(int i = 0; i < n; i++)
+    {
+        cin >> arr1[i];
+    }
+    
+    int m;
+    cin >> m;
+    
+    int arr2[m];
+    for(int i = 0; i < m; i++)
+    {
+        cin >> arr2[i];
+    }
+    
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < m; j++)
+        {
+            if(arr1[i] == arr2[j])
+            {
+                cout << arr1[i] << " ";
+                arr2[j] = -1;
+                break;
+            }
+        }
+    }
+    cout << endl;
+}
+
+int main() {
+	
+	int t;
+	cin >> t;
+	
+	for(int i = 0; i < t; i++)
+	{
+	    solved();
+	}
+}
+
+
+O. Pair Sum
+time limit per test1 second
+memory limit per test256 megabytes
+You have been given an integer array of size N
+ and a number X
+. You need to find the total number of pairs in the array which sum to X
+.
+
+Two pairs are considered different if they involve different indices of the array, even if the values are the same.
+
+Input
+The first line contains an integer t
+ (1≤t≤100)
+ — the number of test cases.
+
+For each test case: The first line contains an integer N
+ (0≤N≤1000)
+ — the size of the array. The second line contains N
+ integers. The third line contains an integer X
+ (0≤X≤109)
+.
+
+Output
+For each test case, print a single integer — the number of pairs in the array whose sum is equal to X
+.
+
+Examples
+Input
+1
+9
+1 3 6 2 5 4 3 2 4
+7
+Output
+7
+Input
+2
+9
+1 3 6 2 5 4 3 2 4
+12
+6
+2 8 10 5 -2 5
+10
+Output
+0
+2
+Note
+The given array can contain duplicate elements.
+
+My Solution (O)
+#include <iostream>
+using namespace std;
+
+void solved()
+{
+    int n;
+    cin >> n;
+    
+    int arr[n];
+    for(int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    int target;
+    cin >> target;
+    int pairCnt = 0;
+    
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = i + 1; j < n; j++)
+        {
+            if(arr[i] + arr[j] == target)
+            {
+                pairCnt++;
+            }
+        }
+    }
+    cout << pairCnt << endl;
+}
+
+int main() {
+	
+	int t;
+	cin >> t;
+	
+	for(int i = 0; i < t; i++)
+	{
+	    solved();
+	}
+}
+
+
+P. Triplets
+time limit per test1 second
+memory limit per test256 megabytes
+You have been given an integer array of size N
+ and a number X
+. Find the total number of triplets in the array which sum to X
+.
+
+Two triplets are considered different if they involve different indices of the array, even if the values are the same.
+
+Input
+1≤t≤50
+0≤N≤102
+0≤X≤109
+Output
+Print the number of triplets.
+
+Examples
+Input
+1
+7
+1 2 3 4 5 6 7
+12
+Output
+5
+Input
+2
+7
+1 2 3 4 5 6 7
+19
+9
+2 -5 8 -6 0 5 10 11 -3
+10
+Output
+0
+5
+Note
+For the 2nd Example: Since there doesn't exist any triplet with sum equal to 19 for the first testcase, we print 0. For the second testcase, we have 5 triplets in total that sum up to 10. They are, (2, 8, 0), (2, 11, -3), (-5, 5, 10), (8, 5, -3) and (-6, 5, 11)
+
+My Solution (P)
+
+#include <iostream>
+using namespace std;
+
+void solved()
+{
+    int n;
+    cin >> n;
+    
+    int arr[n];
+    for(int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    int target;
+    cin >> target;
+    int pairCnt = 0;
+    
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = i + 1; j < n; j++)
+        {
+            
+            for(int k = j + 1; k < n; k++)
+            {
+                if(arr[i] + arr[j] + arr[k] == target)
+                {
+                    pairCnt++;
+                }
+            }
+        }
+    }
+    cout << pairCnt << endl;
+}
+
+int main() {
+	
+	int t;
+	cin >> t;
+	
+	for(int i = 0; i < t; i++)
+	{
+	    solved();
+	}
+}
+
+
+Q. Count Quadraplets
+time limit per test1 second
+memory limit per test256 megabytes
+You are given an array A
+ of length n
+ and an integer x
+ (the target). Your task is to count the number of quadruplets (i,j,k,l)
+ such that:
+
+A[i]−2∗A[j]+3∗A[k]−4∗A[l]=x,
+
+where 0<i<j<k<l<n
+.
+
+Input
+The first line contains two integers n
+ and x
+ (1≤n≤100
+, |x|≤106
+).
+
+The second line contains n
+ integers A1,A2,…,An
+ (|Ai|≤1000
+).
+
+Output
+Print a single integer, the number of quadruplets (i,j,k,l)
+ that satisfy the given condition.
+
+Examples
+Input
+4 -2
+3 2 1 1
+Output
+1
+Input
+8 -10
+1 2 3 4 5 6 5 6
+Output
+5
+Note
+For the 2nd Example, The valid quadruplets (i,j,k,l)
+ (1-indexed) are:
+
+[ (1,3,5,7):   1 - 2 * 3 + 3 * 5 - 4 * 5 = -10 ]
+
+[ (1,3,5,8):   1 - 2 * 3 + 3 * 5 - 4 * 6 = -10 ]
+
+[ (1,3,7,8):   1 - 2 * 3 + 3 * 7 - 4 * 6 = -10 ]
+
+[ (2,3,6,7):   2 - 2 * 3 + 3 * 6 - 4 * 5 = -10 ]
+
+[ (2,3,6,8):   2 - 2 * 3 + 3 * 6 - 4 * 6 = -10 ]
+
+So the answer is 5
+.
+
+Two quadruplets are considered different if they have at least one different index among them.
+
+My Solution (Q)
+
+#include <iostream>
+using namespace std;
+
+void solved()
+{
+    int n, target;
+    cin >> n >> target;
+    
+    int arr[n];
+    for(int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    int pairCnt = 0;
+    
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = i + 1; j < n; j++)
+        {
+            for(int k = j + 1; k < n; k++)
+            {
+               for(int l = k + 1; l < n; l++)
+               {
+                   if(arr[i] - 2 * arr[j] + 3 * arr[k] - 4 * arr[l] == target)
+                   {
+                       pairCnt++;
+                   }
+               }
+            }
+        }
+    }
+    cout << pairCnt << endl;
+}
+
+int main() {
+	
+	int t = 1;
+	//cin >> t;
+	
+	for(int i = 0; i < t; i++)
+	{
+	    solved();
+	}
+}
+

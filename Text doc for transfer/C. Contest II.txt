@@ -1,0 +1,238 @@
+A. Result Day
+time limit per test1 second
+memory limit per test256 megabytes
+It's the result day and you are given the marks of N
+ students in a class and the passing marks.
+
+A student is considered Pass if their marks are greater than or equal to the passing marks. Otherwise, the student is considered Fail.
+
+Your task is to count how many students passed and how many failed.
+
+Input
+First line contains integer N
+ (1≤N≤105)
+ — number of students.
+Second line contains N
+ integers Ai
+ (0≤Ai≤100)
+ — marks of students.
+Third line contains integer P
+ (0≤P≤100)
+ — passing marks.
+Output
+Print exactly two lines:
+
+
+Pass: X
+Fail: Y
+where:
+
+X
+ = number of students who passed
+Y
+ = number of students who failed
+Example
+Input
+5
+45 60 30 80 50
+50
+Output
+Pass: 3
+Fail: 2
+
+My Soltuion(A)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int n, target, passMarks;
+	cin >> n;
+	
+	int a[n];
+	
+	for(int i = 0; i < n; i++)
+	{
+	    cin >> a[i];
+	}
+	
+	cin >> passMarks;
+	
+	int countPass = 0;
+	int countFail = 0;
+	for(int i = 0; i < n; i++)
+	{
+	    if (a[i] >= passMarks)
+	    {
+	        countPass++;
+	    }
+	    else
+	    {
+	       countFail++; 
+	    }
+	}
+	cout << "Pass: " <<  countPass << endl;
+	cout << "Fail: " <<  countFail << endl;
+}
+
+
+B. Fastest Runner
+time limit per test1 second
+memory limit per test256 megabytes
+In an Olympic race, there are N
+ runners numbered from 1
+ to N
+.
+
+You are given the time taken by each runner to complete the race.
+
+The runner with the minimum time is considered the fastest.
+
+If multiple runners have the same fastest time, choose the runner with the larger ID.
+
+Input
+First line contains integer N
+ (1≤N≤105)
+.
+
+Second line contains N
+ integers T1,T2,…,TN
+ where
+1≤Ti≤109
+represents the time taken by the i
+-th runner.
+
+Output
+Print a single integer — the ID of the fastest runner.
+
+Example
+Input
+5
+12 9 15 9 10
+Output
+4
+Note
+There are (5) runners with the following completion times:
+
+[12, 9, 15, 9, 10]
+
+The minimum time taken is (9).
+
+This time occurs for two runners:
+
+Runner (2)
+Runner (4)
+Since multiple runners have the same fastest time, we choose the runner with the larger ID.
+
+Hence, the answer is:
+
+4
+
+My Solution (B)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int n;
+	cin >> n ;
+	
+	int a[n];
+	
+	for(int i = 0; i < n; i++)
+	{
+	    cin >> a[i];
+	}
+	
+	int winnerpos = 0;
+	int winner = a[0];
+	for(int i = 1; i < n; i++)
+	{
+	    if (a[i] <= winner)
+	    {
+	        winner = a[i];
+	        winnerpos = i + 1;
+	    }
+
+	}
+	cout << winnerpos << endl;
+}
+
+
+
+C. Sort 0 1 2
+time limit per test1 second
+memory limit per test256 megabytes
+You are given an array that contains only the values {0, 1, 2}.
+
+Your task is to print the array in descending order.
+
+Input
+First line contains an integer N
+ (1≤N≤105)
+ — size of the array.
+Second line contains N
+ integers Ai
+ (Ai∈{0,1,2})
+.
+Output
+Print the array in descending order.
+
+Example
+Input
+6
+0 2 1 2 0 1
+Output
+2 2 1 1 0 0 
+
+My Solution
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int n;
+	cin >> n;
+	
+	int a[n];
+	
+	for(int i = 0; i < n; i++)
+	{
+	    cin >> a[i];
+	}
+	
+	int c0 = 0, c1 = 0, c2 = 0;
+
+	for(int i = 0; i < n; i++)
+	{
+	    if (a[i] == 0)
+	    {
+	        c0++;
+	    }
+	    else if (a[i] == 1)
+	    {
+	        c1++;
+	    }
+	    else
+	    {
+	        c2++;
+	    }
+	}
+	
+	for(int i = 0; i < c2; i++)
+	{
+	    cout << "2 ";
+	}
+		for(int i = 0; i < c1; i++)
+	{
+	    cout << "1 ";
+	}
+		for(int i = 0; i < c0; i++)
+	{
+	    cout << "0 ";
+	}
+}
+

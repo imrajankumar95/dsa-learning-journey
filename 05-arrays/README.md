@@ -21,6 +21,13 @@ Foundational array operations — traversal, search, min/max tracking, in-place 
 | H | [Sort 01](h-sort-01.cpp) | Counting sort (0s and 1s) | O(n) | O(n) |
 | I | [Reverse](i-reverse-in-place.cpp) | In-place reverse | O(n) | O(n) |
 | J | [Arrange the Numbers](j-arrange-the-numbers.cpp) | Two-pointer fill | O(n) | O(n) |
+| K | [Swap Alternate](k-swap-alternate.cpp) | Pairwise swap | O(n) | O(n) |
+| L | [Missing Number](l-missing-number.cpp) | Frequency count (unique element) | O(n²) | O(n) |
+| M | [Find Duplicate Number](m-find-duplicate-number.cpp) | Frequency count | O(n²) | O(n) |
+| N | [Intersection of Arrays](n-intersection-of-arrays.cpp) | Nested scan + mark used | O(n·m) | O(n+m) |
+| O | [Pair Sum](o-pair-sum.cpp) | Count pairs to target | O(n²) | O(n) |
+| P | [Triplets](p-triplets.cpp) | Count triplets to target | O(n³) | O(n) |
+| Q | [Count Quadruplets](q-count-quadruplets.cpp) | Weighted index equation | O(n⁴) | O(n) |
 
 ---
 
