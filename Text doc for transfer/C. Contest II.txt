@@ -236,3 +236,465 @@ int main() {
 	}
 }
 
+
+D. Compare Factorials
+time limit per test1 second
+memory limit per test256 megabytes
+You are given two non-negative integers A
+ and B
+.
+
+Your task is to determine whether A!=B!
+∗
+.
+
+∗
+For a non-negative integer n
+, the factorial of n
+ is defined as n!=1⋅2⋅3⋯n
+, and by definition 0!=1
+.
+
+Input
+A single line containing two integers A
+ and B
+0≤A,B≤1018
+
+Output
+Print Yes if A!=B!
+, otherwise print No.
+
+Examples
+Input
+0 1
+Output
+Yes
+Input
+1 2
+Output
+No
+Input
+1 1
+Output
+Yes
+Input
+1 0
+Output
+Yes
+
+My Solution (D)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	long long a, b;
+	cin >> a >> b;
+	
+	if(a == 0)
+	{
+	    a = 1;
+	}
+	
+	if(b == 0)
+	{
+	    b = 1;
+	}
+	
+	if (a == b)
+	{
+	    cout << "Yes" << endl;
+	}
+	else
+	{
+	    cout << "No" << endl;
+	}
+
+}
+
+
+E. Beautiful Array
+time limit per test1 second
+memory limit per test256 megabytes
+An array is said to be beautiful if all its elements are equal.
+
+Given an array of integers, determine whether the array is beautiful or not.
+
+Input
+First line contains an integer N
+ (1≤N≤105)
+ — size of the array.
+
+Second line contains N
+ integers Ai
+ (−109≤Ai≤109)
+.
+
+Output
+Print YES if the array is beautiful, otherwise print NO.
+
+Examples
+Input
+4
+1 2 2 4
+Output
+NO
+Input
+5
+7 7 7 7 7
+Output
+YES
+
+My Solution (E)
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	
+	int n;
+	cin >> n;
+	
+	int a[n];
+	
+	for(int i = 0; i < n; i++)
+	{
+	    cin >> a[i];
+	}
+	
+	bool flag = true;
+	for(int i = 1; i < n; i++)
+	{
+	    if (a[i] != a[i-1])
+	    {
+	        flag = false;
+	        cout << "NO" << endl;
+	        break;
+	    }
+	}
+	
+	if (flag)
+	{
+	    cout << "YES" << endl;
+	}
+}
+
+F. Special Factors
+time limit per test1 second
+memory limit per test256 megabytes
+Given an integer N
+, print all special factors∗
+ of N
+ in increasing order.
+
+A factor is called special if its last digit is 2
+ or 7
+ (i.e., dmod10∈{2,7}
+).
+
+∗
+A positive integer d
+ is a factor of N
+ if Nmodd=0
+.
+
+Input
+The only line contains an integer N
+ (1≤N≤106
+).
+
+Output
+Print all special factors of N
+ in increasing order, separated by spaces. If N
+ has no special factors, print -1.
+
+Examples
+Input
+12
+Output
+2 12
+Input
+84
+Output
+2 7 12 42
+Input
+5
+Output
+-1
+
+My Solution (F)
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	
+	int n;
+	cin >> n;
+	
+	bool spftrflag = true;
+	
+	for(int i = 1; i <= n; i++)
+	{
+	    if (n % i == 0 and (i % 10 == 2 or i % 10 == 7))
+	    {
+	        spftrflag = false;
+	        cout << i << " ";
+	    }
+	}
+	
+	if (spftrflag)
+	{
+	    cout << -1 << endl;
+	}
+}
+
+
+G. RCB wins again
+time limit per test1 s.
+memory limit per test256 MB
+After winning the IPL, RCB is posing for a victory photo. But instead of standing in the usual order, the captain wants a formation that feels perfectly symmetric.
+
+The arrangement is defined as follows:
+
+Start from the two middle players.
+Then move one step outward on both sides.
+Print the next outward pair.
+Continue until all players are included.
+You must print the players in this order:
+
+middle-left, middle-right, then expanding outward by alternating left and right, until the entire array is covered.
+
+Input
+An even integer N
+ (2≤N≤100000)
+.
+A line containing N
+ space-separated integers a0,a1,…,aN−1
+, where −109≤ai≤109
+.
+Output
+Print the rearranged sequence in one line, space-separated.
+
+Example
+Input
+6
+10 20 30 40 50 60
+Output
+30 40 20 50 10 60
+Explanation
+
+Since N
+ is even, the two middle players are:
+
+middle-left = a2=30
+middle-right = a3=40
+These two are printed first.
+
+Then we move outward step by step:
+
+First step outward:
+left side: a1=20
+right side: a4=50
+
+Second step outward:
+left side: a0=10
+right side: a5=60
+Putting them together in order: [ 30 40 20 50 10 60 ]
+
+My Solution (G)
+#include <iostream>
+using namespace std;
+
+void solve()
+{
+    int n;
+    cin >> n;
+    
+    int a[n];
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    
+    int midl = n / 2 - 1;
+    int midr = n / 2;
+    
+    
+    for (int k = 0; k < n/2 ; k++)
+    {
+        cout << a[midl - k] << " " << a[midr + k] << " ";
+    }
+}
+
+int main() {
+    
+    int t = 1;
+    //cin >> t;
+    
+    for(int i = 1; i <= t; i++)
+    {
+        solve();
+    }
+}
+
+
+H. Almost Primes
+time limit per test1 second
+memory limit per test256 megabytes
+A prime number is a number that has exactly 2
+ divisors∗
+: 1
+ and the number itself.
+
+A number x
+ is called almost prime if it has at most 4
+ positive divisors.
+
+Given an integer N
+, print all almost prime numbers in the range [1,N]
+ in increasing order.
+
+∗
+A positive integer d
+ is a divisor of x
+ if d∣x
+, i.e., x
+ is divisible by d
+ with remainder 0
+.
+
+Input
+The only line contains an integer N
+ (1≤N≤5000
+).
+
+Output
+Print all integers x
+ such that 1≤x≤N
+ and x
+ has at most 4
+ positive divisors. Print them in increasing order, separated by single spaces.
+
+Example
+Input
+12
+Output
+1 2 3 4 5 6 7 8 9 10 11
+Note
+For N=12
+, the number 12
+ is not almost prime because it has 6
+ positive divisors: 1,2,3,4,6,12.
+
+My Solution (H)
+
+#include <iostream>
+using namespace std;
+ 
+bool almostPrimeCheck(int num)
+{
+    int count = 0;
+    for (int i = 1; i <= num; i++)
+    {
+        if (num % i == 0)
+        {
+            count++;
+        }
+    }
+    return count <= 4;
+}
+ 
+int main() {
+    
+    int n;
+    cin >> n;
+	
+	for(int i = 1; i <= n; i++)
+	{
+	    if(almostPrimeCheck(i)){
+	        cout << i << " ";
+	    }
+	}
+}
+
+
+I. Unique Elements
+time limit per test1 second
+memory limit per test256 megabytes
+You are given an array of integers.
+
+Your task is to print all elements that occur exactly once in the array, in the same order as they appear in the input.
+
+Input
+The first line contains an integer N
+ (1≤N≤5000
+), the number of elements in the array.
+
+The second line contains N
+ integers a1,a2,…,aN
+ (−109≤ai≤109
+).
+
+Output
+Print all elements that occur exactly once in the array, in the same order as the input, separated by single spaces.
+
+If no such element exists, print an empty line.
+
+Examples
+Input
+6
+1 2 2 3 4 3
+Output
+1 4
+Input
+3
+1 2 3
+Output
+1 2 3
+Input
+3
+1 1 1
+Output
+
+
+My Solution (I)
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	
+	int n;
+	cin >> n;
+	
+	int a[n];
+	
+	for(int i = 0; i < n; i++)
+	{
+	    cin >> a[i];
+	}
+	
+	for(int i = 0; i < n; i++)
+	{
+	    int target = a[i];
+	    int count = 0;
+	    
+	    for(int j = 0; j < n; j++)
+	    {
+	        if(a[j] == target)
+	        {
+	            count++;
+	        }
+	    }
+	    
+	    if(count == 1)
+	    {
+	        cout << target << " ";
+	    }
+	}
+	
+}
+
+
+
+
